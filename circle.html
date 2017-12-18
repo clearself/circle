@@ -1,0 +1,60 @@
+<html>
+
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+
+		<script type="text/javascript" src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+		<style>
+			.zh-circle {
+				position: relative;
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				box-sizing: border-box;
+				margin: 100px auto 0;
+			}
+			
+			.zh-circle span {
+				position: absolute;
+				z-index: 2;
+				left: 50%;
+				top: 0;
+				width: 16px;
+				height: 16px;
+				margin: -15px 0 0 -10px;
+				border: 1px solid #f00;
+				box-sizing: border-box;
+				transform-origin: 10px 40px;
+				background-color: #fff;
+			}
+			.zh-circle div {
+				position: absolute;
+				width: 50px;
+				height: 50px;
+				left:50%;
+				top:50%;
+				border-radius: 50%;
+				border: 1px solid #f00;
+				box-sizing: border-box;
+				z-index: 10;
+				background-color: #fff;
+				transform:translate(-50%,-50%);
+    	-webkit-transform: translate(-50%,-50%);
+			}
+		</style>
+		<div class="zh-circle">
+			<div></div>
+		</div>
+		<script>
+			var liSize = 10,
+			str = '';
+			for(var i = 0; i < liSize; i++) {
+				str += '<span style="transform: rotate(' + 360 / liSize * i + 'deg)"></span>';
+			}
+			$('.zh-circle').append(str);
+		</script>
+
+		</body>
+
+</html>
